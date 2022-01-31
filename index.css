@@ -1,0 +1,121 @@
+body {
+	margin: none;
+	background-color: black;
+	border-color: none;
+    border-spacing: none;
+}
+
+table {
+	width: 100%;
+    background-color: #1ddb26;
+	border-spacing: 0px;
+}
+
+/*menu*/
+.menu_topo {
+	background: #000000;
+	text-align: right;
+	height: 60px;
+	}
+	ul {
+		list-style-type: none;
+		text-align: right;
+		margin: 0px;
+    	background-color:#000000;
+		border-radius: 0px;
+}
+	li {
+		display: inline;
+		padding: 2px;
+    	background-color:#000000;
+    	color: #ffffff;
+    	text-decoration: none;
+        font-family: Tahoma, Verdana, sans-serif;
+    	border-bottom: 0px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: 0px;
+		margin-right: 35px;
+}
+a:link {
+	color: #ffffff;
+	text-decoration: none;
+	   }
+a:visited {
+  	color: #ffffff;
+  	text-decoration:none;
+}
+a.link_conteudo:link {
+	color: #ffffff;
+  	text-decoration:none;
+}
+a.link_conteudo:visited {
+	color: #ffffff;
+  	text-decoration:none;
+}
+a.link_rodape:link {
+	color: #ffffff;
+  	text-decoration:none;
+}
+a.link_rodape:visited {
+	color: #ffffff;
+  	text-decoration:none;
+}
+
+/*conteudo*/
+.menu_redes{
+    background: #c40a0a00;
+    display: table-cell;
+    width: 100px;
+    border-spacing: none;
+
+}
+.icon_redes {
+    background: #36fc0400;
+    padding-left: 50px;
+
+}
+.principal {
+    background-image: url(img/bg_001.png);
+	background-color: rgb(15, 18, 201);
+	margin: none;
+	border-spacing: none;
+    
+}
+	h1 {
+	text-align: right;
+    font-family: Tahoma, Verdana, sans-serif;
+	font-size: 30px;
+	color: #ffffff;
+}
+	h2 {
+	text-align: center;
+	font-size: 20px;
+	color: #ffffff;
+}
+	p {
+	border: none;
+	color: #ffffff;
+	text-align: center;
+	padding-left: 80px;
+	padding-right: 80px;
+	font-size: 20px;
+	}
+.capa {
+    background-color: rgba(165, 42, 42, 0);
+    width: 350px;
+    padding-right: 125px;
+
+}
+#idcapa {
+    height: 400px;
+    padding-right: none;
+    margin-left: 35%;
+    margin-top: 20%;
+
+}
+#iddestaque{
+    width: 200px;
+    margin-right: 20%;
+    margin-top: none;
+}
