@@ -1,41 +1,160 @@
-body {
-	margin: none;
-	background-color: black;
-	border-color: none;
-    border-spacing: none;
+
+/* Grid */
+.grid {
+	display: grid;
+}
+.principal {
+	grid-template:
+		"logo nav nav" 100px
+		"sidenav content content" 3fr
+		"sidenav rodape rodape" 1fr
+		/ 140px 1fr 1fr;
+		background-color: rgba(0, 0, 0, 0);
 }
 
-table {
-	width: 100%;
-    background-color: #1ddb26;
-	border-spacing: 0px;
+.apresentacao {
+	grid-template:
+		"logo nav nav" 100px
+		"tit tit tit" 1fr
+		"left center right" 5fr
+		"rodape rodape rodape" 1fr
+		/ 140px 1fr 140px;
+		background-color: rgba(0, 0, 0, 0);
 }
+.experiencia {
+	grid-template:
+		"logo nav nav" 100px
+		"tit tit tit" 1fr
+		"center center center" 5fr
+		"rodape rodape rodape" 1fr
+		/ 140px 1fr 140px;
+		background-color: rgba(0, 0, 0, 0);
+}
+
+.logo {
+	grid-area: logo;
+	padding-left: 40px;
+}
+
+.nav {
+	grid-area: nav;
+	justify-self: right;
+	align-self: flex-end;
+	max-height: 100%;
+}
+
+.content {
+	grid-area: content;
+}
+
+.sidenav {
+	grid-area: sidenav;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	justify-self: right;	
+}
+
+.rodape {
+	grid-area: rodape;
+}
+
+.tit {
+	grid-area: tit;
+	align-self: flex-end;
+
+}
+
+.left {
+	grid-area: left;	
+
+}
+
+.center {
+	grid-area: center;
+	padding-top: 10px;
+	padding-left: 2vmax;
+	padding-right: 2vmax;
+	
+}
+
+.right{
+	grid-area: right;
+}
+
+/* Grid Item */
+.item {
+	margin: 5px;
+	background: rgba(255, 99, 71, 0);
+	text-align: center;
+}
+
+.grid {
+	max-width: 100%;
+	margin: 0px;
+	border: 3px solid rgb(255, 255, 255);
+}
+
+h1 {
+	text-decoration: none;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-size: 40px;
+	margin-bottom: 0px;
+	font-variant-caps: petite-caps;
+	color: #ffae00;
+}
+
+h2 {
+	text-decoration: none;
+	font-family: Tahoma, Verdana, sans-serif;
+	font-size: 1em;
+	text-align: center;
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: white;
+}
+
+body {
+	background-color: rgb(0, 0, 0);
+	font-family: monospace;
+	color: white;
+	padding-bottom: 60px;
+	margin: 0px;
+}
+
+body > div {
+	padding: 40px 20px;
+}
+
+body > div:nth-of-type(even) {
+	background: rgb(90, 238, 90);
+}
+
+body > div > img {
+	display: auto;
+	margin: 0 auto;
+	max-width: 100%;
+}
+/*topo*/
 
 /*menu*/
-.menu_topo {
-	background: #000000;
-	text-align: right;
-	height: 60px;
-	}
-	ul {
-		list-style-type: none;
-		text-align: right;
-		margin: 0px;
-    	background-color:#000000;
-		border-radius: 0px;
+ul {
+	list-style-type: none;
+	margin: 0px;
+	text-align: right;							
 }
-	li {
+	li {	
 		display: inline;
 		padding: 2px;
-    	background-color:#000000;
     	color: #ffffff;
     	text-decoration: none;
         font-family: Tahoma, Verdana, sans-serif;
-    	border-bottom: 0px;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		margin-left: 0px;
-		margin-right: 35px;
+		font-variant: small-caps;
+		font-size: 1.5em;
+    	margin-right: 35px;
+
+		
 }
 a:link {
 	color: #ffffff;
@@ -45,54 +164,48 @@ a:visited {
   	color: #ffffff;
   	text-decoration:none;
 }
-a.link_conteudo:link {
-	color: #ffffff;
-  	text-decoration:none;
+#logo {
+	height: 100%;
+	width: 100%;
 }
-a.link_conteudo:visited {
-	color: #ffffff;
-  	text-decoration:none;
-}
-a.link_rodape:link {
-	color: #ffffff;
-  	text-decoration:none;
-}
-a.link_rodape:visited {
-	color: #ffffff;
-  	text-decoration:none;
-}
+
 
 /*conteudo*/
-.menu_redes{
-    background: #c40a0a00;
-    display: table-cell;
-    width: 100px;
-    border-spacing: none;
-
-}
-.icon_redes {
-    background: #36fc0400;
-    padding-left: 50px;
-
-}
-.principal {
+.capa {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
     background-image: url(img/bg_001.png);
-	background-color: rgb(15, 18, 201);
-	margin: none;
-	border-spacing: none;
-    
+	background-size: 100%;
+
 }
-	h1 {
-	text-align: right;
-    font-family: Tahoma, Verdana, sans-serif;
-	font-size: 30px;
-	color: #ffffff;
+#fotocapa{
+	width: 70%;
+	float: right;
 }
-	h2 {
-	text-align: center;
-	font-size: 20px;
-	color: #ffffff;
+#nomecapa {
+	width: 50%;
+	float: left;
 }
+.iconredes {
+	width: 40px;
+	height: 40px;
+	padding: 2px;
+}
+.imgleft {
+	margin-left: 10vmax;
+	width: 45vmin;
+
+}
+
+.imgright {
+	float: right;
+	margin-right: 10vmax;
+	padding-top: 10vmin;
+	width: 45vmin;
+
+}
+
 	p {
 	border: none;
 	color: #ffffff;
@@ -101,21 +214,3 @@ a.link_rodape:visited {
 	padding-right: 80px;
 	font-size: 20px;
 	}
-.capa {
-    background-color: rgba(0, 0, 0, 0);
-    width: 350px;
-    padding-right: 125px;
-
-}
-#idcapa {
-    height: 400px;
-    padding-right: none;
-    margin-left: 35%;
-    margin-top: 20%;
-
-}
-#iddestaque{
-    width: 200px;
-    margin-right: 20%;
-    margin-top: none;
-}
